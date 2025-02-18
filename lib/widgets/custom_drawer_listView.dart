@@ -26,9 +26,9 @@ class _CustomListDrawerItemState extends State<CustomListDrawerItem> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+    return SliverList.builder(
+      // shrinkWrap: true,
+      // physics: const NeverScrollableScrollPhysics(),
       itemCount: drawerList.length,
       itemBuilder: (context, index) {
         return GestureDetector(
