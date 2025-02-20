@@ -26,9 +26,9 @@ class Assets {
   /// assets/images/expenses.svg
   static const String imagesExpenses = "assets/images/expenses.svg";
 
-  /// Assets for imagesIncom
-  /// assets/images/incom.svg
-  static const String imagesIncom = "assets/images/incom.svg";
+  /// Assets for imagesIncome
+  /// assets/images/income.svg
+  static const String imagesIncome = "assets/images/income.svg";
 
   /// Assets for imagesLogout
   /// assets/images/logout.svg
@@ -45,6 +45,10 @@ class Assets {
   /// Assets for imagesMyTransaction
   /// assets/images/my-transaction.svg
   static const String imagesMyTransaction = "assets/images/my-transaction.svg";
+
+  /// Assets for imagesOutcome
+  /// assets/images/outcome.svg
+  static const String imagesOutcome = "assets/images/outcome.svg";
 
   /// Assets for imagesSetting2
   /// assets/images/setting-2.svg
