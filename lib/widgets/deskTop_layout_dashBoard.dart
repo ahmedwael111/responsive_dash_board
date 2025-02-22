@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/meddil_section.dart';
+import 'package:responsive_dash_board/widgets/my_card.dart';
 
 class DesktopLayoutDashboard extends StatelessWidget {
   const DesktopLayoutDashboard({super.key});
@@ -16,10 +17,14 @@ class DesktopLayoutDashboard extends StatelessWidget {
           width: 22,
         ),
         Expanded(
-            flex: 2,
-            child: MedillSection())
+          flex: 2,
+          child: MedillSection(),
+        ),
+        SizedBox(
+          width: 22,
+        ),
+        Expanded(child: MyCard())
       ],
     );
   }
 }
-
