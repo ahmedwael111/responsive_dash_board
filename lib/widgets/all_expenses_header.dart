@@ -7,20 +7,17 @@ class AllExpensesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 16),
-      child: Row(
-        children: [
-          Text(
-            'All Expenses',
-            style: AppStyles.styleSemiBold20,
-          ),
-          Expanded(
-            child: SizedBox(),
-          ),
-          RangeOptions()
-        ],
-      ),
+    return const Row(
+      children: [
+        Text(
+          'All Expenses',
+          style: AppStyles.styleSemiBold20,
+        ),
+        Expanded(
+          child: SizedBox(),
+        ),
+        RangeOptions()
+      ],
     );
   }
 }
