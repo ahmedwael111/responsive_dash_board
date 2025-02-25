@@ -29,7 +29,16 @@ class DesktopLayoutDashboard extends StatelessWidget {
         SizedBox(
           width: 22,
         ),
-        Expanded(child: IncomSection())
+        Expanded(
+            child: Column(
+          children: [
+            MyCardAndTransectionSection(),
+            SizedBox(
+              height: 20,
+            ),
+            Expanded(child: IncomSection()),
+          ],
+        ))
       ],
     );
   }

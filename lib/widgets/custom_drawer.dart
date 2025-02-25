@@ -11,42 +11,46 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: const CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: UserInfoListtile(
-              userInfoModel: UserInfoModel(
-                  image: Assets.imagesAvatarAdmin,
-                  title: 'Ahmed Wael',
-                  subTitle: 'ahmed855wael@gmail.com'),
+    return SizedBox(
+      width: MediaQuery.sizeOf(context).width * .7,
+      child: Container(
+        color: Colors.white,
+        child: const CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: UserInfoListtile(
+                userInfoModel: UserInfoModel(
+                    image: Assets.imagesAvatarAdmin,
+                    title: 'Ahmed Wael',
+                    subTitle: 'ahmed855wael@gmail.com'),
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 6,
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 6,
+              ),
             ),
-          ),
-          CustomListDrawerItem(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              children: [
-                Expanded(child: SizedBox()),
-                InActiveItem(
-                    drawerModel: DrawerModel(
-                        title: 'Setting system', image: Assets.imagesSetting2)),
-                InActiveItem(
-                    drawerModel: DrawerModel(
-                        title: 'Logout account', image: Assets.imagesLogout)),
-                SizedBox(
-                  height: 48,
-                ),
-              ],
-            ),
-          )
-        ],
+            CustomListDrawerItem(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  Expanded(child: SizedBox()),
+                  InActiveItem(
+                      drawerModel: DrawerModel(
+                          title: 'Setting system',
+                          image: Assets.imagesSetting2)),
+                  InActiveItem(
+                      drawerModel: DrawerModel(
+                          title: 'Logout account', image: Assets.imagesLogout)),
+                  SizedBox(
+                    height: 48,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
