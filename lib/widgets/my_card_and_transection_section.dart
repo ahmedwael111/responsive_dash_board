@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_background_widget.dart';
-import 'package:responsive_dash_board/widgets/my_card.dart';
 import 'package:responsive_dash_board/widgets/my_card_widget.dart';
 import 'package:responsive_dash_board/widgets/transection_history.dart';
 

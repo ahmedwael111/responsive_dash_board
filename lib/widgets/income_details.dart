@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/income_item_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
@@ -15,13 +17,22 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return IncomeItem(incomeItemModel: items[index]);
-      },
+    // log(MediaQuery.sizeOf(context).width.toString());
+    return Column(
+      children: items.map(
+        (e) {
+          return IncomeItem(incomeItemModel: e);
+        },
+      ).toList(),
     );
+
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return IncomeItem(incomeItemModel: items[index]);
+    //   },
+    // );
   }
 }
 
@@ -39,11 +50,11 @@ class IncomeItem extends StatelessWidget {
       ),
       title: Text(
         incomeItemModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         incomeItemModel.trailing,
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }

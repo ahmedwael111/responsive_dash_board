@@ -23,7 +23,7 @@ class CustomBottom extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12))),
         child: Text(
           text,
-          style: AppStyles.styleSemiBold18.copyWith(color: textColor),
+          style: AppStyles.styleSemiBold18(context).copyWith(color: textColor),
         ),
       ),
     );

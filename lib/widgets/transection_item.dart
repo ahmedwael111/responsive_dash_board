@@ -14,15 +14,15 @@ class TransectionItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           transectonModel.title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16(context),
         ),
         subtitle: Text(
           transectonModel.date,
-          style: AppStyles.styleRegular16.copyWith(color: Colors.grey),
+          style: AppStyles.styleRegular16(context).copyWith(color: Colors.grey),
         ),
         trailing: Text(
           transectonModel.amount,
-          style: AppStyles.styleSemiBold20.copyWith(
+          style: AppStyles.styleSemiBold20(context).copyWith(
             color: transectonModel.isDrewal
                 ? const Color(0xffF3735E)
                 : Colors.green,

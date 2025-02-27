@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 
 class AdabtiveLayoutWidget extends StatelessWidget {
   const AdabtiveLayoutWidget(
@@ -10,9 +11,9 @@ class AdabtiveLayoutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constrains) {
-      if (constrains.maxWidth < 800) {
+      if (constrains.maxWidth < SizeConfig.breakBointTablet) {
         return mobileLayout(context);
-      } else if (constrains.maxWidth < 1200) {
+      } else if (constrains.maxWidth < SizeConfig.breakBointDeskTop) {
         return tabletLayout(context);
       } else {
         return desktopLayout(context);

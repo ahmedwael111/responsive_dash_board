@@ -10,7 +10,7 @@ class CustomTextField extends StatelessWidget {
       cursorColor: Colors.blue,
       decoration: InputDecoration(
           filled: true,
-          hintStyle: AppStyles.styleRegular16.copyWith(color: Colors.grey),
+          hintStyle: AppStyles.styleRegular16(context).copyWith(color: Colors.grey),
           hintText: hint,
           fillColor: Colors.grey[100],
           enabledBorder: spsificOutline(),
