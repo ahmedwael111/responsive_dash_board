@@ -13,8 +13,8 @@ class IncomeBody extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
     return 1200 <= width && width <= 1530
         ? const Padding(
-            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-            child: SizedBox(width: 250, child: DetailedIncomeChart()),
+            padding: EdgeInsets.only(top: 32, left: 12, right: 12),
+            child: SizedBox(width: 200, child: DetailedIncomeChart()),
           )
         : const Row(
             children: [

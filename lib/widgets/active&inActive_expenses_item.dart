@@ -36,23 +36,32 @@ class InActiveExpensesItem extends StatelessWidget {
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpensesItemModel.title,
-              style: AppStyles.styleMedium16(context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesItemModel.title,
+                style: AppStyles.styleMedium16(context),
+              ),
             ),
             const SizedBox(
               height: 8,
             ),
-            Text(
-              allExpensesItemModel.date,
-              style: AppStyles.styleRegular14(context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesItemModel.date,
+                style: AppStyles.styleRegular14(context),
+              ),
             ),
             const SizedBox(
               height: 16,
             ),
-            Text(
-              allExpensesItemModel.price,
-              style: AppStyles.styleSemiBold24(context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesItemModel.price,
+                style: AppStyles.styleSemiBold24(context),
+              ),
             ),
           ],
         ),
@@ -72,8 +81,6 @@ class ActiveExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 200,
-      // padding: const EdgeInsets.all(12),
       decoration: ShapeDecoration(
         color: Colors.blue,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -85,29 +92,41 @@ class ActiveExpensesItem extends StatelessWidget {
           children: [
             AllExpensesItemHeader(
               imageColor: Colors.white,
-              imageBackgroundColor: Colors.white.withOpacity(0.1),
+              imageBackgroundColor: Colors.white10,
               image: allExpensesItemModel.image,
             ),
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpensesItemModel.title,
-              style: AppStyles.styleMedium16(context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesItemModel.title,
+                style: AppStyles.styleMedium16(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 8,
             ),
-            Text(
-              allExpensesItemModel.date,
-              style: AppStyles.styleRegular14(context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesItemModel.date,
+                style: AppStyles.styleRegular14(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 16,
             ),
-            Text(
-              allExpensesItemModel.price,
-              style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensesItemModel.price,
+                style: AppStyles.styleSemiBold24(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
           ],
         ),

@@ -33,38 +33,76 @@ class _AllExpensesItemListState extends State<AllExpensesItemList> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: itemlist.asMap().entries.map(
-      (e) {
-        int x = e.key;
-        var item = e.value;
-        return x == 1
-            ? Expanded(
-                child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    currrntIndex = e.key;
-                  });
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: AllExpensesItem(
-                    allExpensesItemModel: item,
-                    isactive: currrntIndex == e.key,
-                  ),
-                ),
-              ))
-            : Expanded(
-                child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        currrntIndex = e.key;
-                      });
-                    },
-                    child: AllExpensesItem(
-                      allExpensesItemModel: item,
-                      isactive: currrntIndex == e.key,
-                    )));
-      },
-    ).toList());
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currrntIndex = 0;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: itemlist[0],
+              isactive: currrntIndex == 0,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currrntIndex = 1;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: itemlist[1],
+              isactive: currrntIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                currrntIndex = 2;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: itemlist[2],
+              isactive: currrntIndex == 2,
+            ),
+          ),
+        ),
+      ],
+    );
+    // return Row(
+    //     children: itemlist.asMap().entries.map(
+    //   (e) {
+    //     int x = e.key;
+    //     var item = e.value;
+    //     return Expanded(
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           setState(() {
+    //             currrntIndex = e.key;
+    //           });
+    //         },
+    //         child: Padding(
+    //           padding: EdgeInsets.symmetric(horizontal: x == 1 ? 12 : 0),
+    //           child: AllExpensesItem(
+    //             allExpensesItemModel: item,
+    //             isactive: currrntIndex == e.key,
+    //           ),
+    //         ),
+    //       ),
+    //     );
+    //   },
+    // ).toList());
   }
 }

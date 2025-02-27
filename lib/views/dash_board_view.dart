@@ -23,6 +23,7 @@ class _DashBoardViewState extends State<DashBoardView> {
       drawer: width < SizeConfig.breakBointTablet ? const CustomDrawer() : null,
       appBar: width < SizeConfig.breakBointTablet
           ? AppBar(
+              toolbarHeight: 30,
               backgroundColor: Colors.grey[100],
               leading: GestureDetector(
                   onTap: () {
